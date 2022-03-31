@@ -1,0 +1,457 @@
+/* caixinha  */
+#plugin-acessibilidade-toolbar{
+    position:fixed;
+    font-size:16px !important;
+    line-height:1.4;
+    z-index:9999;
+    background-color: #ffffff !important;
+    top: 55%;
+    margin-top: -42vh;
+}
+.plugin-acessibilidade-toolbar-toggle a{
+	background-color: #ffffff !important;
+	border:  1px solid #cccccc;
+	-webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.2);
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.2)
+
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-right{
+    right:-180px;
+    -webkit-transition:right 750ms cubic-bezier(.23, 1, .32, 1);
+    -moz-transition:right 750ms cubic-bezier(.23, 1, .32, 1);
+    -o-transition:right 750ms cubic-bezier(.23, 1, .32, 1);
+    transition:right 750ms cubic-bezier(.23, 1, .32, 1)
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-right .plugin-acessibilidade-toolbar-open{
+    right:0 !important;
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-right .plugin-acessibilidade-toolbar-toggle{
+    right:180px !important;
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-left{
+    left:-180px;
+    -webkit-transition:left 750ms cubic-bezier(.23, 1, .32, 1);
+    -moz-transition:left 750ms cubic-bezier(.23, 1, .32, 1);
+    -o-transition:left 750ms cubic-bezier(.23, 1, .32, 1);
+    transition:left 750ms cubic-bezier(.23, 1, .32, 1)
+}
+.plugin-acessibilidade-toolbar-open{
+    /*left:0;*/
+    right:0px;
+}
+#plugin-acessibilidade-toolbar.plugin-acessibilidade-toolbar-left .plugin-acessibilidade-toolbar-toggle{
+    left:180px
+}
+.plugin-acessibilidade-toolbar-close {
+    /*left: -180px !important;*/
+    right: -180px !important;
+}
+#plugin-acessibilidade-toolbar.plugin-acessibilidade-toolbar-open .plugin-acessibilidade-toolbar-toggle,#plugin-acessibilidade-toolbar.plugin-acessibilidade-toolbar-open .plugin-acessibilidade-toolbar-overlay{
+    -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.2);
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.2)
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-toggle{
+    position:absolute;
+    right: 180px;
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-toggle a{
+    display:inline-block;
+    font-size:200%;
+    line-height:0;
+    padding:10px;
+    -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.1);
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.1)
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-toggle a:hover,#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-toggle a:focus{
+    -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.2);
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.2)
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay{
+    border:1px solid;
+    font-size:100%;
+    width:180px
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay p.plugin-acessibilidade-toolbar-title{
+    display:block;
+    line-height:2;
+    font-weight:bold;
+    padding:10px 15px 0;
+    margin:0
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items{
+    list-style:none;
+    margin:0;
+    padding:10px 0
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items.plugin-acessibilidade-links{
+    border-top:1px solid
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items li.plugin-acessibilidade-toolbar-item a{
+    display:block;
+    padding:10px 15px;
+    font-size:80%;
+    line-height:1
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items li.plugin-acessibilidade-toolbar-item a.active{
+    font-weight:bold
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items li.plugin-acessibilidade-toolbar-item a svg{
+    padding-right:6px;
+    display:inline-block;
+    width:1.5em;
+    font-style:normal;
+    font-weight:normal;
+    font-size:inherit;
+    line-height:1;
+    text-align:center;
+    text-rendering:auto;
+    vertical-align:middle
+}
+#plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items li.plugin-acessibilidade-toolbar-item a .plugin-acessibilidade-toolbar-text{
+    vertical-align:middle
+}
+body.rtl #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items li.plugin-acessibilidade-toolbar-item a svg{
+    padding-left:6px;
+    padding-right:0
+}
+@media (max-width:767px){
+    #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay p.plugin-acessibilidade-toolbar-title{
+        padding:7px 12px 0
+    }
+    #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items{
+        padding:7px 0
+    }
+    #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items li.plugin-acessibilidade-toolbar-item a{
+        display:block;
+        padding:7px 12px
+    }
+}
+/* /caixinha  */
+
+/*acessibilidade*/
+
+.escala-cinza{
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-webkit-filter: grayscale(1);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: gray;
+}
+
+.fundo-preto:not(img.carousel-inner.item, .panel-heading){
+	background: #000000 !important;
+    color: #ffffff !important;
+}
+
+.fundo-preto img:not(.carousel-inner.item){
+	mix-blend-mode: luminosity !important;
+}
+
+.fundo-preto .carousel-inner.item img{
+	mix-blend-mode: unset !important;
+}
+
+.fundo-preto a{
+	color: #ffffff !important;	
+	text-decoration: underline !important;
+}
+
+.fundo-preto a:hover{
+	color: #fff !important;	
+	background-color: #000 !important;
+}
+
+.fundo-preto .panel .panel-heading{
+    color: #000000 !important;
+}
+
+.fundo-preto input{
+	border:  2px solid #ffffff !important;
+	color:  #fff !important;
+}
+.fundo-preto button{
+	border:  2px solid #fff !important;
+	background-color: #000 !important;
+	color: #fff !important;
+}
+.fundo-preto #subMenu li a{
+	color: #fff !important;
+}
+.fundo-preto #subMenu li{
+	border-bottom:  #fff !important;
+}
+.fundo-preto .nav-pills>li.active>a, .fundo-preto .nav-pills>li.active>a:focus, .fundo-preto .nav-pills>li.active>a:hover{
+    background-color:#fff !important;
+}
+
+.fundo-preto .dataTables_paginate a{
+	background-color: #000 !important;
+	color: #fff !important;
+	border: 1px solid #fff !important;
+}
+
+.fundo-preto .dataTables_paginate a.current{
+	background-color: #fff !important;
+	color: #000 !important ;
+}
+
+
+.fundo-claro:not(.logotipoXs, .logoRodape, .assinatura){
+	background: #ffffff !important;
+    color: #000 !important;
+}
+
+.fundo-claro a{
+	color: #000 !important;	
+	text-decoration: underline !important;
+}
+
+.fundo-claro a:hover{
+	color: #fff !important;	
+	background-color: #000 !important;
+}
+
+.fundo-claro input{
+	border:  2px solid #000 !important;
+	color:  #000 !important;
+}
+.fundo-claro button{
+	border:  2px solid #000 !important;
+	background-color: #fff !important;
+	color: #000 !important;
+}
+
+.fundo-claro #subMenu li a{
+	color: #000 !important;
+}
+.fundo-claro #subMenu li{
+	border-bottom:  #000 !important;
+}
+.fundo-claro .nav-pills>li.active>a, .fundo-claro .nav-pills>li.active>a:focus, .fundo-claro .nav-pills>li.active>a:hover{
+    background-color:#000 !important;
+}
+
+.fundo-claro .dataTables_paginate a{
+	background-color: #fff !important;
+	color: #000 !important;
+	border: 1px solid #000 !important;
+}
+
+.fundo-claro .dataTables_paginate a.current{
+	background-color: #000 !important;
+	color: #fff !important ;
+}
+
+.fundo-imagens{
+	background-color: #000 !important;
+}
+
+.alto-contraste .placebo{
+    line-height:normal
+}
+.alto-contraste *{
+    -webkit-box-shadow:none !important;
+    box-shadow:none !important
+}
+.alto-contraste .panel-heading {
+    color: black !important;
+}
+.alto-contraste .titulo_tabela_impressao, .alto-contraste label{
+    color: yellow !important;
+}
+
+.alto-contraste a, .alto-contraste abbr, .alto-contraste acronym, .alto-contraste address, .alto-contraste article, .alto-contraste aside, .alto-contraste b, .alto-contraste basefont, .alto-contraste bdi, .alto-contraste big, .alto-contraste blink, .alto-contraste blockquote, .alto-contraste body, .alto-contraste button, .alto-contraste canvas, .alto-contraste caption, .alto-contraste center, .alto-contraste cite, .alto-contraste code, .alto-contraste col, .alto-contraste colgroup, .alto-contraste command, .alto-contraste dd, .alto-contraste del, .alto-contraste details, .alto-contraste dfn, .alto-contraste dir, .alto-contraste div, .alto-contraste dl, .alto-contraste dt, .alto-contraste em, .alto-contraste embed, .alto-contraste fieldset, .alto-contraste figcaption, .alto-contraste figure, .alto-contraste font, .alto-contraste footer, .alto-contraste form, .alto-contraste h1, .alto-contraste h1 a, .alto-contraste h1 a b, .alto-contraste h1 abbr, .alto-contraste h1 b, .alto-contraste h1 center, .alto-contraste h1 em, .alto-contraste h1 i, .alto-contraste h1 span, .alto-contraste h1 strong, .alto-contraste h2, .alto-contraste h2 a, .alto-contraste h2 a b, .alto-contraste h2 abbr, .alto-contraste h2 b, .alto-contraste h2 center, .alto-contraste h2 em, .alto-contraste h2 i, .alto-contraste h2 span, .alto-contraste h2 strong, .alto-contraste h3, .alto-contraste h3 a, .alto-contraste h3 a b, .alto-contraste h3 abbr, .alto-contraste h3 b, .alto-contraste h3 center, .alto-contraste h3 em, .alto-contraste h3 i, .alto-contraste h3 span, .alto-contraste h3 strong, .alto-contraste h4, .alto-contraste h4 a, .alto-contraste h4 a b, .alto-contraste h4 abbr, .alto-contraste h4 b, .alto-contraste h4 center, .alto-contraste h4 em, .alto-contraste h4 i, .alto-contraste h4 span, .alto-contraste h4 strong, .alto-contraste h5, .alto-contraste h5 a, .alto-contraste h5 a b, .alto-contraste h5 abbr, .alto-contraste h5 b, .alto-contraste h5 center, .alto-contraste h5 em, .alto-contraste h5 i, .alto-contraste h5 span, .alto-contraste h5 strong, .alto-contraste h6, .alto-contraste h6 a, .alto-contraste h6 a b, .alto-contraste h6 abbr, .alto-contraste h6 b, .alto-contraste h6 center, .alto-contraste h6 em, .alto-contraste h6 i, .alto-contraste h6 span, .alto-contraste h6 strong, .alto-contraste header, .alto-contraste hgroup, .alto-contraste html, .alto-contraste i, .alto-contraste iframe, .alto-contraste img, .alto-contraste input, .alto-contraste ins, .alto-contraste kbd, .alto-contraste label, .alto-contraste legend, .alto-contraste li, .alto-contraste listing, .alto-contraste main, .alto-contraste mark, .alto-contraste marquee, .alto-contraste menu, .alto-contraste meter, .alto-contraste multicol, .alto-contraste nav, .alto-contraste nobr, .alto-contraste object, .alto-contraste ol, .alto-contraste option, .alto-contraste output, .alto-contraste p, .alto-contraste plaintext, .alto-contraste pre, .alto-contraste progress, .alto-contraste q, .alto-contraste rb, .alto-contraste rp, .alto-contraste rt, .alto-contraste ruby, .alto-contraste s, .alto-contraste samp, .alto-contraste section, .alto-contraste select, .alto-contraste small, .alto-contraste span, .alto-contraste strike, .alto-contraste strong, .alto-contraste sub, .alto-contraste summary, .alto-contraste sup, .alto-contraste svg, .alto-contraste table, .alto-contraste tbody, .alto-contraste td, .alto-contraste text, .alto-contraste textarea, .alto-contraste th, .alto-contraste thead, .alto-contraste time, .alto-contraste tr, .alto-contraste tt, .alto-contraste u, .alto-contraste ul, .alto-contraste var, .alto-contraste video, .alto-contraste xmp {
+    -moz-appearance: none !important;
+    -moz-user-select: text !important;
+    -webkit-user-select: text !important;
+    background-image: none !important;
+    text-shadow: none !important;
+    user-select: text !important;
+}
+.alto-contraste body, .alto-contraste a,.alto-contraste abbr,.alto-contraste acronym,.alto-contraste address,.alto-contraste article,.alto-contraste aside,.alto-contraste b,.alto-contraste basefont,.alto-contraste bdi,.alto-contraste big,.alto-contraste blink,.alto-contraste blockquote,.alto-contraste body,.alto-contraste canvas,.alto-contraste caption,.alto-contraste center,.alto-contraste cite,.alto-contraste code,.alto-contraste col,.alto-contraste colgroup,.alto-contraste command,.alto-contraste dd,.alto-contraste del,.alto-contraste details,.alto-contraste dfn,.alto-contraste dir,.alto-contraste div,.alto-contraste dl,.alto-contraste dt,.alto-contraste em,.alto-contraste embed,.alto-contraste fieldset,.alto-contraste figcaption,.alto-contraste figure,.alto-contraste font,.alto-contraste footer,.alto-contraste form,.alto-contraste h1,.alto-contraste h1 a,.alto-contraste h1 a b,.alto-contraste h1 abbr,.alto-contraste h1 b,.alto-contraste h1 center,.alto-contraste h1 em,.alto-contraste h1 i,.alto-contraste h1 span,.alto-contraste h1 strong,.alto-contraste h2,.alto-contraste h2 a,.alto-contraste h2 a b,.alto-contraste h2 abbr,.alto-contraste h2 b,.alto-contraste h2 center,.alto-contraste h2 em,.alto-contraste h2 i,.alto-contraste h2 span,.alto-contraste h2 strong,.alto-contraste h3,.alto-contraste h3 a,.alto-contraste h3 a b,.alto-contraste h3 abbr,.alto-contraste h3 b,.alto-contraste h3 center,.alto-contraste h3 em,.alto-contraste h3 i,.alto-contraste h3 span,.alto-contraste h3 strong,.alto-contraste h4,.alto-contraste h4 a,.alto-contraste h4 a b,.alto-contraste h4 abbr,.alto-contraste h4 b,.alto-contraste h4 center,.alto-contraste h4 em,.alto-contraste h4 i,.alto-contraste h4 span,.alto-contraste h4 strong,.alto-contraste h5,.alto-contraste h5 a,.alto-contraste h5 a b,.alto-contraste h5 abbr,.alto-contraste h5 b,.alto-contraste h5 center,.alto-contraste h5 em,.alto-contraste h5 i,.alto-contraste h5 span,.alto-contraste h5 strong,.alto-contraste h6,.alto-contraste h6 a,.alto-contraste h6 a b,.alto-contraste h6 abbr,.alto-contraste h6 b,.alto-contraste h6 center,.alto-contraste h6 em,.alto-contraste h6 i,.alto-contraste h6 span,.alto-contraste h6 strong,.alto-contraste header,.alto-contraste hgroup,.alto-contraste html,.alto-contraste i,.alto-contraste iframe,.alto-contraste input,.alto-contraste ins,.alto-contraste kbd,.alto-contraste label,.alto-contraste legend,.alto-contraste li,.alto-contraste listing,.alto-contraste main,.alto-contraste mark,.alto-contraste marquee,.alto-contraste menu,.alto-contraste meter,.alto-contraste multicol,.alto-contraste nav:not(#plugin-acessibilidade-toolbar),.alto-contraste nobr,.alto-contraste object,.alto-contraste ol,.alto-contraste option,.alto-contraste output,.alto-contraste p,.alto-contraste plaintext,.alto-contraste pre,.alto-contraste progress,.alto-contraste q,.alto-contraste rb,.alto-contraste rp,.alto-contraste rt,.alto-contraste ruby,.alto-contraste s,.alto-contraste samp,.alto-contraste section,.alto-contraste small,.alto-contraste span,.alto-contraste strike,.alto-contraste strong,.alto-contraste sub,.alto-contraste summary,.alto-contraste sup,.alto-contraste svg,.alto-contraste table,.alto-contraste tbody,.alto-contraste td,.alto-contraste text,.alto-contraste textarea,.alto-contraste th,.alto-contraste thead,.alto-contraste time,.alto-contraste tr,.alto-contraste tt,.alto-contraste u,.alto-contraste ul,.alto-contraste var,.alto-contraste video,.alto-contraste xmp{
+    background:black !important;
+    background-color:black !important
+}
+.alto-contraste a,.alto-contraste article,.alto-contraste aside,.alto-contraste basefont,.alto-contraste bdi,.alto-contraste big,.alto-contraste blink,.alto-contraste blockquote,.alto-contraste body,.alto-contraste button,.alto-contraste canvas,.alto-contraste caption,.alto-contraste center,.alto-contraste code,.alto-contraste col,.alto-contraste colgroup,.alto-contraste command,.alto-contraste dd,.alto-contraste del,.alto-contraste details,.alto-contraste dir,.alto-contraste div,.alto-contraste dl,.alto-contraste dt,.alto-contraste embed,.alto-contraste fieldset,.alto-contraste figcaption,.alto-contraste figure,.alto-contraste font,.alto-contraste footer,.alto-contraste form,.alto-contraste header,.alto-contraste hgroup,.alto-contraste html,.alto-contraste iframe,.alto-contraste img,.alto-contraste input,.alto-contraste ins,.alto-contraste kbd,.alto-contraste label,.alto-contraste legend,.alto-contraste li,.alto-contraste listing,.alto-contraste main,.alto-contraste mark,.alto-contraste marquee,.alto-contraste menu,.alto-contraste meter,.alto-contraste multicol,.alto-contraste nav,.alto-contraste nobr,.alto-contraste object,.alto-contraste ol,.alto-contraste option,.alto-contraste output,.alto-contraste p,.alto-contraste plaintext,.alto-contraste pre,.alto-contraste progress,.alto-contraste q,.alto-contraste rb,.alto-contraste rp,.alto-contraste rt,.alto-contraste ruby,.alto-contraste s,.alto-contraste samp,.alto-contraste section,.alto-contraste select,.alto-contraste small,.alto-contraste span,.alto-contraste strike,.alto-contraste sub,.alto-contraste summary,.alto-contraste sup,.alto-contraste svg,.alto-contraste table,.alto-contraste tbody,.alto-contraste td,.alto-contraste text,.alto-contraste textarea,.alto-contraste th,.alto-contraste thead,.alto-contraste time,.alto-contraste tr,.alto-contraste tt,.alto-contraste ul,.alto-contraste var,.alto-contraste video,.alto-contraste xmp{
+    color:white !important
+}
+.alto-contraste abbr,.alto-contraste acronym,.alto-contraste b,.alto-contraste b span,.alto-contraste h1 b,.alto-contraste h1 strong,.alto-contraste h2 b,.alto-contraste h2 strong,.alto-contraste h3 b,.alto-contraste h3 strong,.alto-contraste h4 b,.alto-contraste h4 strong,.alto-contraste h5 b,.alto-contraste h5 strong,.alto-contraste h6 b,.alto-contraste h6 strong,.alto-contraste strong,.alto-contraste strong span{
+    color:yellow !important
+}
+.alto-contraste address,.alto-contraste address span,.alto-contraste cite,.alto-contraste cite span,.alto-contraste dfn,.alto-contraste dfn span,.alto-contraste em,.alto-contraste em span,.alto-contraste h1 em,.alto-contraste h1 i,.alto-contraste h2 em,.alto-contraste h2 i,.alto-contraste h3 em,.alto-contraste h3 i,.alto-contraste h4 em,.alto-contraste h4 i,.alto-contraste h5 em,.alto-contraste h5 i,.alto-contraste h6 em,.alto-contraste h6 i,.alto-contraste i,.alto-contraste i span,.alto-contraste u,.alto-contraste u span{
+    color:#FFFF80 !important
+}
+.alto-contraste dt{
+    border-top:thin solid grey !important
+}
+.alto-contraste h1,.alto-contraste h1 a,.alto-contraste h1 a b,.alto-contraste h1 abbr,.alto-contraste h1 center,.alto-contraste h1 span,.alto-contraste h2,.alto-contraste h2 a,.alto-contraste h2 a b,.alto-contraste h2 abbr,.alto-contraste h2 center,.alto-contraste h2 span,.alto-contraste h3,.alto-contraste h3 a,.alto-contraste h3 a b,.alto-contraste h3 abbr,.alto-contraste h3 center,.alto-contraste h3 span,.alto-contraste h4,.alto-contraste h4 a,.alto-contraste h4 a b,.alto-contraste h4 abbr,.alto-contraste h4 center,.alto-contraste h4 span,.alto-contraste h5,.alto-contraste h5 a,.alto-contraste h5 a b,.alto-contraste h5 abbr,.alto-contraste h5 center,.alto-contraste h5 span,.alto-contraste h6,.alto-contraste h6 a,.alto-contraste h6 a b,.alto-contraste h6 abbr,.alto-contraste h6 center,.alto-contraste h6 span{
+    color:#40C090 !important
+}
+.alto-contraste img{
+    background:#808080 !important;
+    background-color:#808080 !important
+}
+.alto-contraste abbr,.alto-contraste acronym{
+    border-bottom:1px dotted !important
+}
+.alto-contraste :focus{
+    outline:thin dotted !important
+}
+.alto-contraste a.button,.alto-contraste a.button abbr,.alto-contraste a.button acronym,.alto-contraste a.button b,.alto-contraste a.button basefont,.alto-contraste a.button big,.alto-contraste a.button br,.alto-contraste a.button code,.alto-contraste a.button div,.alto-contraste a.button em,.alto-contraste a.button font,.alto-contraste a.button h1,.alto-contraste a.button h2,.alto-contraste a.button h3,.alto-contraste a.button h4,.alto-contraste a.button h5,.alto-contraste a.button h6,.alto-contraste a.button i,.alto-contraste a.button kbd,.alto-contraste a.button rb,.alto-contraste a.button rp,.alto-contraste a.button rt,.alto-contraste a.button ruby,.alto-contraste a.button samp,.alto-contraste a.button small,.alto-contraste a.button span,.alto-contraste a.button strong,.alto-contraste a.button tt,.alto-contraste a.button u,.alto-contraste a.button var,.alto-contraste a:link,.alto-contraste a:link abbr,.alto-contraste a:link acronym,.alto-contraste a:link b,.alto-contraste a:link basefont,.alto-contraste a:link big,.alto-contraste a:link br,.alto-contraste a:link code,.alto-contraste a:link div,.alto-contraste a:link em,.alto-contraste a:link font,.alto-contraste a:link h1,.alto-contraste a:link h2,.alto-contraste a:link h3,.alto-contraste a:link h4,.alto-contraste a:link h5,.alto-contraste a:link h6,.alto-contraste a:link i,.alto-contraste a:link kbd,.alto-contraste a:link rb,.alto-contraste a:link rp,.alto-contraste a:link rt,.alto-contraste a:link ruby,.alto-contraste a:link samp,.alto-contraste a:link small,.alto-contraste a:link span,.alto-contraste a:link strong,.alto-contraste a:link tt,.alto-contraste a:link u,.alto-contraste a:link var,.alto-contraste div#secondaryNav div#documentNavigation ul.navigationTabs li.tabItem{
+    color:#0080FF !important
+}
+.alto-contraste button,.alto-contraste input,.alto-contraste textarea,.alto-contraste select,.alto-contraste table,.alto-contraste td,.alto-contraste th,.alto-contraste tr,.alto-contraste tt{
+    border:1px solid #ffffff !important
+}
+.alto-contraste button{
+    background:#600040 !important;
+    background-color:#600040 !important
+}
+.alto-contraste select{
+    -webkit-appearance:listbox !important;
+    background:#600060 !important;
+    background-color:#600060 !important
+}
+.alto-contraste a:visited,.alto-contraste a:visited abbr,.alto-contraste a:visited acronym,.alto-contraste a:visited b,.alto-contraste a:visited basefont,.alto-contraste a:visited big,.alto-contraste a:visited br,.alto-contraste a:visited code,.alto-contraste a:visited div,.alto-contraste a:visited em,.alto-contraste a:visited font,.alto-contraste a:visited h1,.alto-contraste a:visited h2,.alto-contraste a:visited h3,.alto-contraste a:visited h4,.alto-contraste a:visited h5,.alto-contraste a:visited h6,.alto-contraste a:visited i,.alto-contraste a:visited kbd,.alto-contraste a:visited rb,.alto-contraste a:visited rp,.alto-contraste a:visited rt,.alto-contraste a:visited ruby,.alto-contraste a:visited samp,.alto-contraste a:visited small,.alto-contraste a:visited span,.alto-contraste a:visited strong,.alto-contraste a:visited tt,.alto-contraste a:visited u,.alto-contraste a:visited var,.alto-contraste div#secondaryNav div#documentNavigation ul.navigationTabs li.tabItem.active{
+    color:#00FFFF !important
+}
+.alto-contraste ::selection,.alto-contraste ::-moz-selection{
+    background:#4080c0 !important;
+    background-color:#4080c0 !important
+}
+.alto-contraste a.button:hover,.alto-contraste a.button:hover abbr,.alto-contraste a.button:hover acronym,.alto-contraste a.button:hover b,.alto-contraste a.button:hover basefont,.alto-contraste a.button:hover big,.alto-contraste a.button:hover br,.alto-contraste a.button:hover code,.alto-contraste a.button:hover div,.alto-contraste a.button:hover em,.alto-contraste a.button:hover font,.alto-contraste a.button:hover h1,.alto-contraste a.button:hover h2,.alto-contraste a.button:hover h3,.alto-contraste a.button:hover h4,.alto-contraste a.button:hover h5,.alto-contraste a.button:hover h6,.alto-contraste a.button:hover i,.alto-contraste a.button:hover kbd,.alto-contraste a.button:hover rb,.alto-contraste a.button:hover rp,.alto-contraste a.button:hover rt,.alto-contraste a.button:hover ruby,.alto-contraste a.button:hover samp,.alto-contraste a.button:hover small,.alto-contraste a.button:hover span,.alto-contraste a.button:hover strong,.alto-contraste a.button:hover tt,.alto-contraste a.button:hover u,.alto-contraste a.button:hover var,.alto-contraste a:link:hover,.alto-contraste a:link:hover abbr,.alto-contraste a:link:hover acronym,.alto-contraste a:link:hover b,.alto-contraste a:link:hover basefont,.alto-contraste a:link:hover big,.alto-contraste a:link:hover br,.alto-contraste a:link:hover code,.alto-contraste a:link:hover div,.alto-contraste a:link:hover em,.alto-contraste a:link:hover font,.alto-contraste a:link:hover h1,.alto-contraste a:link:hover h2,.alto-contraste a:link:hover h3,.alto-contraste a:link:hover h4,.alto-contraste a:link:hover h5,.alto-contraste a:link:hover h6,.alto-contraste a:link:hover i,.alto-contraste a:link:hover kbd,.alto-contraste a:link:hover rb,.alto-contraste a:link:hover rp,.alto-contraste a:link:hover rt,.alto-contraste a:link:hover ruby,.alto-contraste a:link:hover samp,.alto-contraste a:link:hover small,.alto-contraste a:link:hover span,.alto-contraste a:link:hover strong,.alto-contraste a:link:hover tt,.alto-contraste a:link:hover u,.alto-contraste a:link:hover var,.alto-contraste a:visited:hover,.alto-contraste a:visited:hover abbr,.alto-contraste a:visited:hover acronym,.alto-contraste a:visited:hover b,.alto-contraste a:visited:hover basefont,.alto-contraste a:visited:hover big,.alto-contraste a:visited:hover br,.alto-contraste a:visited:hover code,.alto-contraste a:visited:hover div,.alto-contraste a:visited:hover em,.alto-contraste a:visited:hover font,.alto-contraste a:visited:hover h1,.alto-contraste a:visited:hover h2,.alto-contraste a:visited:hover h3,.alto-contraste a:visited:hover h4,.alto-contraste a:visited:hover h5,.alto-contraste a:visited:hover h6,.alto-contraste a:visited:hover i,.alto-contraste a:visited:hover kbd,.alto-contraste a:visited:hover rb,.alto-contraste a:visited:hover rp,.alto-contraste a:visited:hover rt,.alto-contraste a:visited:hover ruby,.alto-contraste a:visited:hover samp,.alto-contraste a:visited:hover small,.alto-contraste a:visited:hover span,.alto-contraste a:visited:hover strong,.alto-contraste a:visited:hover tt,.alto-contraste a:visited:hover u,.alto-contraste a:visited:hover var{
+    background:#400000 !important;
+    background-color:#400000 !important
+}
+.alto-contraste body>input#site+div#wrapper span.mk,.alto-contraste body>input#site+div#wrapper span.mk b,.alto-contraste input[type=reset]{
+    background:#400060 !important;
+    background-color:#400060 !important
+}
+.alto-contraste div[role="button"],.alto-contraste input[type=button],.alto-contraste input[type=submit]{
+    background:#600040 !important;
+    background-color:#600040 !important
+}
+.alto-contraste input[type=search]{
+    -webkit-appearance:textfield !important
+}
+.alto-contraste html button[disabled],.alto-contraste html input[disabled],.alto-contraste html select[disabled],.alto-contraste html textarea[disabled]{
+    background:#404040 !important;
+    background-color:#404040 !important
+}
+.alto-contraste .menu li a span.label{
+    text-transform:none !important
+}
+.alto-contraste .menu li a span.label,.alto-contraste div.jwplayer span.jwcontrolbar,.alto-contraste div.jwplayer span.jwcontrols{
+    display:inline !important
+}
+.alto-contraste a:link.new,.alto-contraste a:link.new i,.alto-contraste a:link.new b,.alto-contraste span.Apple-style-span{
+    color:#FFFF40 !important
+}
+.alto-contraste body.mediawiki img.tex{
+    background:white !important;
+    background-color:white !important;
+    border:white solid 3px !important
+}
+.alto-contraste text>tspan:first-letter,.alto-contraste text>tspan:first-line{
+    background:inherit !important;
+    background-color:inherit !important;
+    color:inherit !important
+}
+.alto-contraste div.sbtc div.sbsb_a li.sbsb_d div,.alto-contraste table.gssb_c tr.gssb_i a,.alto-contraste table.gssb_c tr.gssb_i b,.alto-contraste table.gssb_c tr.gssb_i span,.alto-contraste table.gssb_c tr.gssb_i td{
+    background:#003050 !important;
+    background-color:#003050 !important
+}
+.alto-contraste img[width="18"][height="18"]{
+    height:18px !important;
+    width:18px !important
+}
+.alto-contraste a>span.iconHelp:empty:after{
+    content:"Help" !important
+}
+.alto-contraste div#gmap,.alto-contraste div#gmap *{
+    background:initial !important
+}
+.alto-contraste #subMenu li a{
+	color: #00ffff !important;
+}
+.alto-contraste #subMenu li{
+	border-bottom:  #00ffff !important;
+}
+.alto-contraste .nav-pills>li.active>a, .alto-contraste .nav-pills>li.active>a:focus, .alto-contraste .nav-pills>li.active>a:hover{
+    background-color:#00ffff !important;
+}
+
+.alto-contraste .dataTables_paginate a{
+	background-color: #fff !important;
+	color: #000 !important;
+	border: 1px solid #000 !important;
+}
+
+.alto-contraste .dataTables_paginate a.current{
+	background-color: #000 !important;
+	color: #00ffff !important ;
+}
+
+body.plugin-acessibilidade-negative-contrast,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar){
+    background:#000 !important;
+    color:#ffffff !important
+}
+body.plugin-acessibilidade-negative-contrast a,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) a,body.plugin-acessibilidade-negative-contrast b,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) b,body.plugin-acessibilidade-negative-contrast blockquote,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) blockquote,body.plugin-acessibilidade-negative-contrast button,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) button,body.plugin-acessibilidade-negative-contrast canvas,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) canvas,body.plugin-acessibilidade-negative-contrast caption,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) caption,body.plugin-acessibilidade-negative-contrast center,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) center,body.plugin-acessibilidade-negative-contrast cite,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) cite,body.plugin-acessibilidade-negative-contrast code,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) code,body.plugin-acessibilidade-negative-contrast col,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) col,body.plugin-acessibilidade-negative-contrast colgroup,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) colgroup,body.plugin-acessibilidade-negative-contrast dd,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) dd,body.plugin-acessibilidade-negative-contrast details,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) details,body.plugin-acessibilidade-negative-contrast dfn,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) dfn,body.plugin-acessibilidade-negative-contrast dir,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) dir,body.plugin-acessibilidade-negative-contrast div,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) div,body.plugin-acessibilidade-negative-contrast dl,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) dl,body.plugin-acessibilidade-negative-contrast dt,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) dt,body.plugin-acessibilidade-negative-contrast em,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) em,body.plugin-acessibilidade-negative-contrast embed,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) embed,body.plugin-acessibilidade-negative-contrast fieldset,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) fieldset,body.plugin-acessibilidade-negative-contrast figcaption,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) figcaption,body.plugin-acessibilidade-negative-contrast figure,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) figure,body.plugin-acessibilidade-negative-contrast font,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) font,body.plugin-acessibilidade-negative-contrast footer,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) footer,body.plugin-acessibilidade-negative-contrast form,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) form,body.plugin-acessibilidade-negative-contrast header,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) header,body.plugin-acessibilidade-negative-contrast i,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) i,body.plugin-acessibilidade-negative-contrast iframe,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) iframe,body.plugin-acessibilidade-negative-contrast img,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) img,body.plugin-acessibilidade-negative-contrast input,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) input,body.plugin-acessibilidade-negative-contrast kbd,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) kbd,body.plugin-acessibilidade-negative-contrast label,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) label,body.plugin-acessibilidade-negative-contrast legend,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) legend,body.plugin-acessibilidade-negative-contrast li,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) li,body.plugin-acessibilidade-negative-contrast mark,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) mark,body.plugin-acessibilidade-negative-contrast menu,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) menu,body.plugin-acessibilidade-negative-contrast meter,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) meter,body.plugin-acessibilidade-negative-contrast nav,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) nav,body.plugin-acessibilidade-negative-contrast nobr,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) nobr,body.plugin-acessibilidade-negative-contrast object,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) object,body.plugin-acessibilidade-negative-contrast ol,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) ol,body.plugin-acessibilidade-negative-contrast option,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) option,body.plugin-acessibilidade-negative-contrast pre,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) pre,body.plugin-acessibilidade-negative-contrast progress,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) progress,body.plugin-acessibilidade-negative-contrast q,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) q,body.plugin-acessibilidade-negative-contrast s,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) s,body.plugin-acessibilidade-negative-contrast section,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) section,body.plugin-acessibilidade-negative-contrast select,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) select,body.plugin-acessibilidade-negative-contrast small,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) small,body.plugin-acessibilidade-negative-contrast span,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) span,body.plugin-acessibilidade-negative-contrast strike,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) strike,body.plugin-acessibilidade-negative-contrast strong,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) strong,body.plugin-acessibilidade-negative-contrast sub,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) sub,body.plugin-acessibilidade-negative-contrast summary,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) summary,body.plugin-acessibilidade-negative-contrast sup,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) sup,body.plugin-acessibilidade-negative-contrast table,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) table,body.plugin-acessibilidade-negative-contrast td,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) td,body.plugin-acessibilidade-negative-contrast textarea,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) textarea,body.plugin-acessibilidade-negative-contrast th,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) th,body.plugin-acessibilidade-negative-contrast time,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) time,body.plugin-acessibilidade-negative-contrast tr,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) tr,body.plugin-acessibilidade-negative-contrast tt,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) tt,body.plugin-acessibilidade-negative-contrast u,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) u,body.plugin-acessibilidade-negative-contrast ul,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) ul,body.plugin-acessibilidade-negative-contrast var,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) var,body.plugin-acessibilidade-negative-contrast a span,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) a span,body.plugin-acessibilidade-negative-contrast strong,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) strong{
+    color:yellow !important
+}
+body.plugin-acessibilidade-negative-contrast button,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) button,body.plugin-acessibilidade-negative-contrast input,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) input,body.plugin-acessibilidade-negative-contrast textarea,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) textarea,body.plugin-acessibilidade-negative-contrast select,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) select,body.plugin-acessibilidade-negative-contrast table,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) table,body.plugin-acessibilidade-negative-contrast td,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) td,body.plugin-acessibilidade-negative-contrast th,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) th,body.plugin-acessibilidade-negative-contrast tr,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) tr,body.plugin-acessibilidade-negative-contrast tt,body.plugin-acessibilidade-negative-contrast *:not(#plugin-acessibilidade-toolbar) tt{
+    border:1px solid #ffffff !important
+}
+body.plugin-acessibilidade-negative-contrast div#gmap,body.plugin-acessibilidade-negative-contrast div#gmap *{
+    background:initial !important
+}
+
+*,::before,::after{
+    box-sizing:border-box
+}
+.plugin-acessibilidade-visible-phone{
+    display:none !important
+}
+.plugin-acessibilidade-visible-tablet{
+    display:none !important
+}
+.plugin-acessibilidade-hidden-desktop{
+    display:none !important
+}
+.plugin-acessibilidade-visible-desktop{
+    display:inherit !important
+}
+@media (min-width:768px) and (max-width:1024px){
+    .plugin-acessibilidade-hidden-desktop{
+        display:inherit !important
+    }
+    .plugin-acessibilidade-visible-desktop{
+        display:none !important
+    }
+    .plugin-acessibilidade-visible-tablet{
+        display:inherit !important
+    }
+    .plugin-acessibilidade-hidden-tablet{
+        display:none !important
+    }
+}
+@media (max-width:767px){
+    .plugin-acessibilidade-hidden-desktop{
+        display:inherit !important
+    }
+    .plugin-acessibilidade-visible-desktop{
+        display:none !important
+    }
+    .plugin-acessibilidade-visible-phone{
+        display:inherit !important
+    }
+    .plugin-acessibilidade-hidden-phone{
+        display:none !important
+    }
+}
+
+
+
+
