@@ -35,12 +35,18 @@ function acessibilidade(tipo){
 	else if(tipo=="alto-contraste"){
 		$("html").addClass('alto-contraste');
 	}
+	else if (tipo=="links") {
+        $("a").addClass('links-sublinhados');
+    }
 }
 
 function resetAcessibilidade(tipo){
+	
 	$("*").removeClass('fundo-claro').removeClass("fundo-preto").removeClass("cinza").removeClass("alto-contraste");
 	$("body,html").removeClass('escala-cinza');
 	$("img").removeClass('fundo-imagens');
+	$("a").removeClass('links-sublinhados');
+	
 	if(tipo=="all"){
         $("*:not(.navbar-fixed-top,h1,svg,.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link,#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner,.plugin-acessibilidade-toolbar-inner p, .plugin-acessibilidade-toolbar-items, .plugin-acessibilidade-toolbar-item a, .plugin-acessibilidade-toolbar-item a span),div:not(.navbar,.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link,#plugin-acessibilidade-toolbar),a:not(.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link)").css('font-size', '0.9rem');
         $(".navbar-fixed-top").find("*").css('font-size', '14px');
@@ -49,7 +55,9 @@ function resetAcessibilidade(tipo){
         $(".plugin-acessibilidade-toolbar-items").find("*").css('font-size', '14px');
 		valor = 0.9;
 	}
+	
 	$(".plugin-acessibilidade-toolbar-toggle").css("font-size","0.9em");
+
 }
 
 $(function() {
@@ -81,6 +89,10 @@ $(function() {
 	$(".plugin-acessibilidade-tools .plugin-acessibilidade-btn-light-background").on("click",function(){
 		acessibilidade("branco");
 	});
+    
+	$(".plugin-acessibilidade-tools .plugin-acessibilidade-btn-links-underline").on("click", function () {
+        acessibilidade("links");
+    });
 
 	$(".plugin-acessibilidade-tools .plugin-acessibilidade-btn-reset").on("click",function(){
 		resetAcessibilidade("all");

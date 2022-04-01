@@ -250,6 +250,10 @@ body.rtl #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay u
 	background-color: #000 !important;
 }
 
+.links-sublinhados {
+    text-decoration: underline !important;
+}
+
 .alto-contraste .placebo{
     line-height:normal
 }
