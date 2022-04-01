@@ -89,7 +89,7 @@
 #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items li.plugin-acessibilidade-toolbar-item a{
     display:block;
     padding:10px 15px;
-    /* font-size:80%; */
+    /*font-size:80%;*/
     font-size: 14px;
     line-height:1
 }
@@ -166,6 +166,7 @@ body.rtl #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay u
 
 .fundo-preto .panel .panel-heading{
     color: #000000 !important;
+    background-color: #ffffff !important;
 }
 
 .fundo-preto input{
@@ -259,6 +260,12 @@ body.rtl #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay u
 .alto-contraste .panel-heading {
     color: black !important;
 }
+
+.alto-contraste .panel .panel-heading {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+}
+
 .alto-contraste .titulo_tabela_impressao, .alto-contraste label{
     color: yellow !important;
 }
@@ -438,17 +445,24 @@ body.plugin-acessibilidade-negative-contrast div#gmap,body.plugin-acessibilidade
         display:none !important
     }
 }
-@media (max-width:767px){
-    .plugin-acessibilidade-hidden-desktop{
-        display:inherit !important
+@media (max-width:767px) {
+    .plugin-acessibilidade-hidden-desktop {
+        display: inherit !important
     }
-    .plugin-acessibilidade-visible-desktop{
-        display:none !important
+
+    .plugin-acessibilidade-visible-desktop {
+        display: none !important
     }
-    .plugin-acessibilidade-visible-phone{
-        display:inherit !important
+
+    .plugin-acessibilidade-visible-phone {
+        display: inherit !important
     }
-    .plugin-acessibilidade-hidden-phone{
-        display:none !important
+
+    .plugin-acessibilidade-hidden-phone {
+        display: none !important
     }
 }
+
+
+
+
