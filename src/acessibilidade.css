@@ -89,7 +89,8 @@
 #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items li.plugin-acessibilidade-toolbar-item a{
     display:block;
     padding:10px 15px;
-    font-size:80%;
+    /* font-size:80%; */
+    font-size: 14px;
     line-height:1
 }
 #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-overlay ul.plugin-acessibilidade-toolbar-items li.plugin-acessibilidade-toolbar-item a.active{
@@ -451,7 +452,3 @@ body.plugin-acessibilidade-negative-contrast div#gmap,body.plugin-acessibilidade
         display:none !important
     }
 }
-
-
-
-
