@@ -47,6 +47,7 @@ function resetAcessibilidade(tipo){
         $(".InfoPerfil").css('font-size', '11px')
         $("#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner p").css('font-size', '16px');
         $(".plugin-acessibilidade-toolbar-items").find("*").css('font-size', '14px');
+		valor = 0.9;
 	}
 	$(".plugin-acessibilidade-toolbar-toggle").css("font-size","0.9em");
 }
