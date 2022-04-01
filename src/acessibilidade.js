@@ -11,8 +11,9 @@ function acessibilidade(tipo){
         valor += 0.1;
         $("*:not(.navbar-fixed-top,h1,svg,.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link,#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner,.plugin-acessibilidade-toolbar-inner p,.plugin-acessibilidade-toolbar-items, .plugin-acessibilidade-toolbar-item a, .plugin-acessibilidade-toolbar-item a span),div:not(.navbar,.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link,#plugin-acessibilidade-toolbar),a:not(.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link)").css('font-size', valor + 'rem');
         $(".navbar-fixed-top").find("*").css('font-size', '14px');
-        $("#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner p").css('font-size', '16px');
-        $(".plugin-acessibilidade-toolbar-items,.plugin-acessibilidade-toolbar-item a, .plugin-acessibilidade-toolbar-item a span").css('font-size', '14px');
+        $(".InfoPerfil").css('font-size', '11px')
+        $("#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner p").css('font-size', '16px');
+        $(".plugin-acessibilidade-toolbar-items").find("*").css('font-size', '14px');
     }
 	else if(tipo=='diminuir'){
 		if(valor>0.9){
@@ -20,8 +21,9 @@ function acessibilidade(tipo){
             $("*:not(.navbar-fixed-top,h1,svg,.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link,#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner,.plugin-acessibilidade-toolbar-inner p, .plugin-acessibilidade-toolbar-items, .plugin-acessibilidade-toolbar-item a, .plugin-acessibilidade-toolbar-item a span),div:not(.navbar,.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link,#plugin-acessibilidade-toolbar),a:not(.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link)").css('font-size', valor + 'rem');
         }
         $(".navbar-fixed-top").find("*").css('font-size', '14px');
-        $("#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner p").css('font-size', '16px');
-        $(".plugin-acessibilidade-toolbar-items,.plugin-acessibilidade-toolbar-item a, .plugin-acessibilidade-toolbar-item a span").css('font-size', '14px');
+        $(".InfoPerfil").css('font-size', '11px')
+        $("#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner p").css('font-size', '16px');
+        $(".plugin-acessibilidade-toolbar-items").find("*").css('font-size', '14px');
 	}
 	else if(tipo=="preto"){
         $("*:not(img,.IcoInbNet)").addClass('fundo-preto');
@@ -41,9 +43,10 @@ function resetAcessibilidade(tipo){
 	$("img").removeClass('fundo-imagens');
 	if(tipo=="all"){
         $("*:not(.navbar-fixed-top,h1,svg,.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link,#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner,.plugin-acessibilidade-toolbar-inner p, .plugin-acessibilidade-toolbar-items, .plugin-acessibilidade-toolbar-item a, .plugin-acessibilidade-toolbar-item a span),div:not(.navbar,.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link,#plugin-acessibilidade-toolbar),a:not(.plugin-acessibilidade-toolbar-toggle,.plugin-acessibilidade-toolbar-link,.plugin-acessibilidade-toolbar-toggle-link)").css('font-size', '0.9rem');
-        $(".navbar-fixed-top").find("*").css('font-size', '14px');        
-        $("#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner p").css('font-size', '16px');
-        $(".plugin-acessibilidade-toolbar-items,.plugin-acessibilidade-toolbar-item a, .plugin-acessibilidade-toolbar-item a span").css('font-size', '14px');
+        $(".navbar-fixed-top").find("*").css('font-size', '14px');
+        $(".InfoPerfil").css('font-size', '11px')
+        $("#plugin-acessibilidade-toolbar,.plugin-acessibilidade-toolbar-overlay,.plugin-acessibilidade-toolbar-inner p").css('font-size', '16px');
+        $(".plugin-acessibilidade-toolbar-items").find("*").css('font-size', '14px');
 	}
 	$(".plugin-acessibilidade-toolbar-toggle").css("font-size","0.9em");
 }
@@ -51,6 +54,7 @@ function resetAcessibilidade(tipo){
 $(function() {
 	$(".plugin-acessibilidade-toolbar-toggle a").on("click",function(){
 		$("#plugin-acessibilidade-toolbar").toggleClass("plugin-acessibilidade-toolbar-close").toggleClass("plugin-acessibilidade-toolbar-open");
+		console.log('ok');
 	});
 
 	$(".plugin-acessibilidade-tools .plugin-acessibilidade-btn-resize-plus").on("click",function(){
