@@ -1,5 +1,5 @@
 # plugin_acessibilidade
-Baseado no plugin "One Click Accessibility" para Wordpress, este plugin adiciona recursos de acessibilidade em qualquer site. 
+Inspirado no plugin "One Click Accessibility" para Wordpress, este plugin adiciona recursos de acessibilidade em qualquer site. 
 
 # Utilização
 Adicionar o arquivo CSS na tag head e o arquivo js antes de fechar o body. 
