@@ -24,6 +24,7 @@
 }
 #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-right .plugin-acessibilidade-toolbar-open{
     right:0 !important;
+    transition: 0.5s;
 }
 #plugin-acessibilidade-toolbar .plugin-acessibilidade-toolbar-right .plugin-acessibilidade-toolbar-toggle{
     right:180px !important;
@@ -38,6 +39,7 @@
 .plugin-acessibilidade-toolbar-open{
     /*left:0;*/
     right:0px;
+    transition: 0.5s;
 }
 #plugin-acessibilidade-toolbar.plugin-acessibilidade-toolbar-left .plugin-acessibilidade-toolbar-toggle{
     left:180px
@@ -45,6 +47,7 @@
 .plugin-acessibilidade-toolbar-close {
     /*left: -180px !important;*/
     right: -180px !important;
+    transition: 0.5s;
 }
 #plugin-acessibilidade-toolbar.plugin-acessibilidade-toolbar-open .plugin-acessibilidade-toolbar-toggle,#plugin-acessibilidade-toolbar.plugin-acessibilidade-toolbar-open .plugin-acessibilidade-toolbar-overlay{
     -webkit-box-shadow:0 0 10px 0 rgba(0,0,0,0.2);
